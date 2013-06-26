@@ -152,12 +152,14 @@ begin
 end;
 
 procedure Tfrm_Main.Timer1Timer(Sender: TObject);
+var
+  t1, t2: TDateTime;
 begin
   sToday := FormatDateTime('yyyy-mm-dd', Now);
-  if sToday = sYesterday then
-  begin
-    Exit;
-  end;
+  if sToday = sYesterday then Exit;
+  t1 := Time;
+  t2 := StrToTime('9:00:00');
+  if t1 < t2 then Exit;
   OutputDebugString('AutoPost:第二天，唤醒工作线程！');
   sYesterday := sToday;
   iTodayPostCount := ini.ReadInteger('date', sToday, 100);
