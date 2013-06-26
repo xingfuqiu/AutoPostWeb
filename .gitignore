@@ -11,7 +11,7 @@ bin/*
 #Delphi7
 *.ddp
 *.~pas
-*.dfm
+*.~dfm
 *.stat
 *.~dpr
 #other
