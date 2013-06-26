@@ -8,4 +8,11 @@ __history
 *.exe
 *.dll
 bin/*
+#Delphi7
+*.ddp
+*.~pas
+*.dfm
+*.stat
+*.~dpr
+#other
 *.rar
